@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script lang="javascript" src="scripts/xlsx.full.min.js"></script>
+    <script lang="javascript" src="scripts/FileSaver.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>Price Finder: Mailing List Generator</div>
+    </header>
+    <div id="main-div">
+      <div id="main-content-area">
+        <div id="display-generate-area">
+          <div id="form-area">
+            <p>Street Number</p>
+            <input type="text" id="streetNumInput" />
+            <p>Street Name</p>
+            <input type="text" id="streetNameInput" />
+            <p>City</p>
+            <input type="text" id="cityInput" />
+            <p>Post code</p>
+            <input type="text" id="postCodeInput" />
+          </div>
+          <div id="begin-btn-holder">
+            <button id="beginBtn">Begin</button>
+            <img src="assets/spinner.gif" id="spinner" alt="Loading..." />
+          </div>
+        </div>
+
+        <div id="display-success-area">
+          <div id="success-area">
+            <img src="assets/check.png" />
+            <div id="success-text-area">
+              <p id="success-text">Success!</p>
+              <p id="success-sub-text">
+                You can download the output excel file below
+              </p>
+            </div>
+          </div>
+          <div style="text-align: center">
+            <button id="download-btn">Download file</button>
+          </div>
+          <div style="text-align: center; margin-top: 20px">
+            <button id="reset-btn">Generate a new file</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="client.js"></script>
+    <script></script>
+  </body>
+</html>
