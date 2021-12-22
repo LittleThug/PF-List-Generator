@@ -41,7 +41,7 @@ io.listen(3000);
 
 async function startBot() {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     args: [`--window-size=1920,1080`, "--no-sandbox"],
     defaultViewport: {
       width: 1920,
